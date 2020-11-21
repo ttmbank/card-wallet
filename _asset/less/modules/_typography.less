@@ -1,0 +1,67 @@
+/* ==========================================================================
+/* ==========================================================================
+/* ==========================================================================
+
+   Typography
+
+   ==========================================================================
+   ==========================================================================
+   ========================================================================== */
+
+html, body, button, input, select, textarea { color: @color-text; font-family: @font-text; line-height: 1.4; text-rendering: optimizeLegibility; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
+
+html { font-size: 20px;
+	@media @res1600 { font-size: 16px; }
+	@media @res1440 { font-size: 15px; }
+	@media @res1280 { font-size: 13px; }
+	@media @res1024 { font-size: 11px; }
+	@media @mobile { font-size: 20px; }
+	@media @mobileSm { font-size: 24px; }
+}
+
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   Text
+   ========================================================================== */
+
+.strike { text-decoration: line-through; }
+.nowrap { white-space: nowrap; }
+
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+.color-white { color: #fff !important; }
+.color-grey { color: @color-txt-grey !important; }
+
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+a { color: @color-link; text-decoration: none; cursor: pointer; outline: none !important; }
+
+.link-brd { color: @color-txt-grey; border-bottom: solid 1px fade(@color-txt-grey, 70%); cursor: default; }
+a.link-brd { cursor: pointer;
+	&:hover { border-bottom-color: transparent !important; }
+}
+
+
+/* ==========================================================================
+   Text block
+   ========================================================================== */
+
+.typical-txt { font-size: 1rem; line-height: 1.5; }
+
+
+
+
+
+

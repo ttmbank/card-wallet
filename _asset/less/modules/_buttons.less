@@ -1,0 +1,98 @@
+/* ==========================================================================
+/* ==========================================================================
+/* ==========================================================================
+
+   Buttons
+
+   ==========================================================================
+   ==========================================================================
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Js to
+   ========================================================================== */
+
+.js-to { cursor: pointer; }
+
+
+/* ==========================================================================
+   Glare
+   ========================================================================== */
+
+.glare { display: block; position: absolute; width: 70px; height: 200%; transform: rotate(13deg); /*background-color: fade(#fff, 30%);*/ top: -60%; right: 120%; animation: glare 4s ease infinite; z-index: 5; pointer-events: none; opacity: .35;
+   background: -moz-linear-gradient(left,  rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.4) 100%);
+   background: -webkit-linear-gradient(left,  rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.4) 100%);
+   background: linear-gradient(to right,  rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.4) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1affffff', endColorstr='#4dffffff',GradientType=1 );
+
+   &:after { content: ''; display: none; position: absolute; width: 20px; height: 100%; background: inherit; right: -15px; top: 0; }
+}
+
+@keyframes glare {
+   from { right: 100%; transform: rotate(13deg) translateX(-110%); }
+   40%, to { right: 0; transform: rotate(13deg) translateX(110%); }
+}
+
+
+/* ==========================================================================
+   Button
+   ========================================================================== */
+
+.btn { display: inline-block; border: none; height: 3rem; line-height: 3rem; text-align: center; color: #fff; background: @color-text; padding: 0 1em; font-size: 1.2rem; font-weight: 700; white-space: nowrap; }
+
+
+@media @desktop {
+   .btn {
+      &:hover { background-color: @color-red; }
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

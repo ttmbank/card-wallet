@@ -1,0 +1,185 @@
+/* ==========================================================================
+/* ==========================================================================
+/* ==========================================================================
+
+   Screen Technology
+
+   ==========================================================================
+   ==========================================================================
+   ========================================================================== */
+
+.scr-tech { .justify-content(flex-end); }
+
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+.scr-tech__left,
+.scr-tech__right { .flex(); .align-items(center); }
+.scr-tech__left { width: 64.6%; padding: 0 5.2vw; background: @color-bg-light; overflow: hidden; position: relative;
+	background: -moz-linear-gradient(-45deg,  #c9c9c9 0%, #ececec 100%);
+	background: -webkit-linear-gradient(-45deg,  #c9c9c9 0%,#ececec 100%);
+	background: linear-gradient(135deg,  #c9c9c9 0%,#ececec 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c9c9', endColorstr='#ececec',GradientType=1 );
+}
+.scr-tech__right { width: 35.4%; padding: 0 2.6vw; }
+
+
+@media @mobile {
+	.scr-tech__left,
+	.scr-tech__right { display: block; width: auto; padding: 0 20px; position: relative; }
+}
+
+
+/* ==========================================================================
+   Left
+   ========================================================================== */
+
+.scr-tech__left { position: fixed; left: 0; top: 0; height: 100vh; z-index: 12; }
+
+.scr-tech__snowball,
+.scr-tech__card,
+.scr-tech__ice,
+.scr-tech__blizzard { display: block; position: absolute; transform: translate(-50%,-50%); pointer-events: none; }
+
+.scr-tech__snowball {
+	&.scr-tech__snowball_left { left: 34%; top: 58%; max-width: 15.5vw; max-height: 31vh; }
+	&.scr-tech__snowball_right { left: 68%; top: 64%; max-width: 15.4vw; max-height: 35vh; }
+}
+.scr-tech__card { left: 50.5%; top: 61%; max-width: 15.5vw; max-height: 45vh; }
+.scr-tech__ice { left: 6.8%; top: 19%; max-width: 3vw; max-height: 6.7vh; }
+.scr-tech__blizzard { left: 50%; top: 50%; width: 142%; }
+
+
+/* ==========================================================================
+   Items
+   ========================================================================== */
+
+.scr-tech__item { position: relative; padding: 0 0 0 3.6rem;
+	+ .scr-tech__item { margin-top: 1.6rem; }
+}
+.scr-tech__item__icon { position: absolute; left: 0; top: -.2rem; width: 2.1rem; height: 2.1rem; .flex();
+	img { width: 100%; height: 100%; }
+}
+.scr-tech__item__title { margin: 0 0 .25em; }
+.scr-tech__item__txt { width: 15.5rem;
+	&.scr-tech__item__txt-ru { width: 18rem; }
+}
+
+
+@media @mobile {
+	.scr-tech__item__txt { width: auto; }
+}
+
+
+/* ==========================================================================
+   Card Cold Mobile
+   ========================================================================== */
+
+.scr-tech__card-mob { display: block; width: 100%; margin: 1.5rem auto 0; }
+
+
+/* ==========================================================================
+   Snowflake
+   ========================================================================== */
+
+.scr-tech__snowflake { display: block; position: absolute; top: 2rem; right: -1.5rem; z-index: 0; width: 15rem; }
+
+
+/* ==========================================================================
+   Animation
+   ========================================================================== */
+
+@media @desktop {
+	.scr-tech__item { transform: translateX(5rem); opacity: 0;
+		body.loaded & { transition: transform .5s 1s, opacity .5s 1s;
+
+			&:nth-child(2) { transition-delay: 1.2s; }
+			&:nth-child(3) { transition-delay: 1.4s; }
+		}
+
+		body.viewing-page-2 & { transform: translateX(0); opacity: 1; }
+		body.viewing-page-1 &,
+		body.viewing-page-3 &,
+		body.viewing-page-4 &,
+		body.viewing-page-5 &,
+		body.viewing-page-6 &,
+		body.viewing-page-7 & { transition-delay: 1s !important; }
+	}
+
+	.scr-tech__left { transform: translateX(-100%);
+		body.loaded & { transition: transform 1s; }
+		body.viewing-page-2 & { transform: translateX(0); }
+	}
+}
+
+
+/* ==========================================================================
+   Animation Mobile
+   ========================================================================== */
+
+@media @mobile {
+	.scr-tech__item,
+	.scr-tech__card-mob { .anim-start();
+		.scr.animated & { .anim-end(); }
+
+		&:nth-child(1) { transition-delay: .4s !important; }
+		&:nth-child(2) { transition-delay: .6s !important; }
+		&:nth-child(3) { transition-delay: .8s !important; }
+	}
+	.scr-tech__card-mob { transition-delay: 1s !important; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

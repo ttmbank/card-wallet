@@ -1,0 +1,89 @@
+/* ==========================================================================
+/* ==========================================================================
+/* ==========================================================================
+
+   Modals
+
+   ==========================================================================
+   ==========================================================================
+   ========================================================================== */
+
+//body.modal-opened { overflow: hidden; }
+
+.backdrop { opacity: 0; pointer-events: none; background: fade(#fff, 50%); position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 98; transition: all .5s ease;
+   body.modal-opened & { opacity: 1; pointer-events: none; }
+}
+
+
+/* ==========================================================================
+   Modal
+   ========================================================================== */
+
+.modal { background: fade(#000, 90%); position: fixed; top: 0; right: 0; height: 100%; width: 50%; z-index: 20; overflow: auto; .flex(); .align-items(center); transform: translateX(100%); transition: transform .3s;
+	.sct-title { white-space: normal; margin: 0 0 1em; }
+
+	&.modal__letter {  background: fade(#000, 90%) url('@{path-images}/bg-letter.png') no-repeat 50% 50%; background-size: 72% auto; }
+
+	&.opened { transform: translateX(0); }
+}
+
+
+/* ==========================================================================
+   Close
+   ========================================================================== */
+
+.btn-close { display: block; background: none; border: none; width: 5rem; height: 5rem; position: absolute; top: 0; right: 0; z-index: 10;
+	&:after, &:before { content: ''; display: block; width: 1.5rem; height: .4rem; background: #9ba1a5; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(45deg); }
+	&:before { transform: translate(-50%,-50%) rotate(-45deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

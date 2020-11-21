@@ -1,0 +1,78 @@
+/* ==========================================================================
+/* ==========================================================================
+/* ==========================================================================
+
+   Grids
+
+   ==========================================================================
+   ==========================================================================
+   ========================================================================== */
+
+body { background: @color-bg; }
+
+.body-wrapper { position: relative; width: 100%; overflow: hidden; margin: 0 auto; }
+
+.container { width: 100%; padding: 0 5.2vw; margin: 0 auto; position: relative; min-height: 1px; .clearfix(); }
+.container-in {  }
+
+canvas { position: fixed; left: 0; top: 0; pointer-events: none;
+	@media @mobile { display: none !important; }
+}
+
+
+@media @mobile {
+	.container { padding: 0 20px; }
+}
+
+
+/* ==========================================================================
+   One page
+   ========================================================================== */
+
+.one-page { position: relative; z-index: 10; transform: translateZ(0); will-change: transform;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+
+@media @mobile {
+	.body-wrapper,
+	.one-page { min-width: @mob-width; overflow: hidden; }
+	.one-page { transform: none !important; transition: none !important; }
+}
+
+
+/* ==========================================================================
+   Screen Grid
+   ========================================================================== */
+
+.scr { position: relative; height: 100vh; .flex(); .align-items(center); }
+
+.scr_cols { .align-items(stretch); }
+.scr__left,
+.scr__right { position: relative; }
+.scr__left { width: 42.7%; .flex(); .align-items(center); padding: 0 5.2vw; }
+.scr__right { width: 57.3%; background: @color-bg-light; .flex(); .align-items(center); .justify-content(center); }
+
+@media @mobile {
+	.scr { height: auto; min-height: 100vh; padding: 70px 0; position: relative !important; left: auto !important; top: auto !important; display: block; }
+
+	.scr__left,
+	.scr__right { width: auto; }
+	.scr__left { padding: 0 20px; }
+}
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.scr-cont { min-height: 54vh; position: relative; }
+
+
+@media @mobile {
+	.scr-cont { min-height: auto; }
+}
+
+
+

@@ -1,0 +1,259 @@
+/* ==========================================================================
+/* ==========================================================================
+/* ==========================================================================
+
+   Fixed
+
+   ==========================================================================
+   ==========================================================================
+   ========================================================================== */
+
+/* ==========================================================================
+   Common
+   ========================================================================== */
+
+.site-logo,
+.lang,
+.fixed-btn,
+.onepage-pagination { position: fixed; z-index: 20; }
+
+
+/* ==========================================================================
+   Logo
+   ========================================================================== */
+
+.site-logo { left: 5.2vw; top: 6.25vh; display: block; height: 6.25vh; }
+
+
+@media @mobile {
+	.site-logo { height: 2rem; }
+}
+
+
+/* ==========================================================================
+   Lang
+   ========================================================================== */
+
+.lang { top: 6.25vh; right: 5.2vw; width: 3rem; height: 3rem; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; line-height: normal; color: @color-text; }
+.lang__head { width: 3rem; height: 3rem; border-radius: 50%; .flex(); .align-items(center); .justify-content(center); position: relative; cursor: pointer; background: #fff; }
+.lang__dropdown { display: none; position: absolute; left: 0; top: 100%; width: 100%; text-align: center; background: #fff; border-radius: 0 0 1.5rem 1.5rem; }
+.lang__item { display: block; line-height: 3rem; cursor: pointer; color: @color-text; }
+
+// opened
+.lang.is-opened {
+	.lang__head { border-radius: 1.5rem 1.5rem 0 0; }
+	.lang__dropdown { display: block; }
+}
+
+
+@media @desktop {
+	.lang:not(.is-opened) .lang__head:hover { }
+	.lang, .lang__head { }
+	.lang__item,
+	.lang__head {
+		&:hover { color: @color-red; }
+	}
+}
+
+@media @mobile {
+	.lang { font-size: 1rem; }
+	.lang,
+	.lang__head { width: 2.5rem; height: 2.5rem; }
+	.lang__dropdown { border-radius: 0 0 1.25rem 1.25rem; }
+	.lang__item { line-height: 2.5rem; }
+}
+
+
+/* ==========================================================================
+   Button
+   ========================================================================== */
+
+.fixed-btn { left: 5.2vw; bottom: 6.25vh; width: 17.5rem; }
+
+
+@media @mobile {
+	.fixed-btn { left: 0; bottom: 0; width: 100%; }
+}
+
+
+/* ==========================================================================
+   Navigagion
+   ========================================================================== */
+
+.onepage-pagination { width: 3rem; right: 5.2vw; bottom: 6.25vh; top: auto;
+	li a { padding: 0; margin: 0 auto; width: .5rem; height: .5rem; border: solid 2px @color-text; border-radius: 50%;
+		&:before { display: none; }
+		&.active { background-color: @color-text; }
+	}
+	li { margin: 1rem 0 0; }
+}
+
+
+@media @desktop {
+	.onepage-pagination {
+		li a {
+			&:not(.active):hover { background-color: @color-red; border-color: @color-red; }
+		}
+	}
+}
+
+@media @mobile {
+	.onepage-pagination { display: none; }
+}
+
+
+/* ==========================================================================
+   Screen Name
+   ========================================================================== */
+
+.scr-name { position: absolute; left: 94.8vw; bottom: 6.25vh; margin-bottom: 11rem; line-height: 3rem; transform: rotate(-90deg); transform-origin: left bottom; text-transform: uppercase; font-size: .8rem; letter-spacing: .2em; white-space: nowrap; }
+
+
+@media @mobile {
+	.scr-name { position: relative; bottom: auto; left: auto; transform: none; margin: 0 0 1.5em 20px; line-height: normal; }
+}
+
+
+// mobile animated
+@media @mobile {
+	.scr-name { .anim-start();
+		.scr.animated & { .anim-end(); }
+	}
+}
+
+
+/* ==========================================================================
+   Snowflake
+   ========================================================================== */
+
+.snowflake { display: block; position: fixed; left: 63%; top: 94%; max-width: 15vw; max-height: 28vh; transform: translate(-50%,-50%); pointer-events: none; z-index: 20; }
+
+
+@media @desktop {
+	.snowflake { top: 194%;
+		body.loaded & { transition: top 1s; }
+		body.viewing-page-2 & { top: 94%; }
+		body.viewing-page-3 &,
+		body.viewing-page-4 &,
+		body.viewing-page-5 &,
+		body.viewing-page-6 &,
+		body.viewing-page-7 & { top: -20%; }
+	}
+}
+
+@media @mobile {
+	.snowflake { display: none; }
+}
+
+
+/* ==========================================================================
+   Mobile Header
+   ========================================================================== */
+
+@media @mobile {
+	.site-header { z-index: 25; position: fixed; left: 0; top: 0; right: 0; padding: 10px 20px; .flex(); .align-items(center); .justify-content(space-between); background: @color-bg;
+		.site-logo,
+		.lang { position: relative; left: auto; top: auto; right: auto; bottom: auto; }
+	}
+}
+
+
+/* ==========================================================================
+   Burger
+   ========================================================================== */
+
+.burger { position: relative; border: none; width: 2.5rem; height: 2.5rem; background: none;
+	&:before, &:after { content: ''; display: block; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); height: .5rem; background: #fff; transition: transform .3s, margin-top .5s; }
+	&:before { margin-top: -.5rem; }
+	&:after { margin-top: .5rem; }
+
+	&.is-active {
+		&:before, &:after { margin-top: 0; }
+		&:before { transform: translate(-50%,-50%) rotate(45deg); }
+		&:after { transform: translate(-50%,-50%) rotate(-45deg); }
+	}
+}
+
+
+/* ==========================================================================
+   Mobile Menu
+   ========================================================================== */
+
+.menu-mob { position: fixed; left: 0; top: 0; right: 0; bottom: 0; background: fade(@color-bg-light, 95%); z-index: 30; padding: 2rem 20px 20px; transform: translateX(100%);
+	.burger { position: absolute; right: 20px; top: 10px;
+		&:before, &:after { background-color: @color-text; }
+	}
+
+	body.loaded & { transition: transform .4s; }
+
+	body.menu-opened & { transform: translateX(0); }
+}
+.menu-mob__list { text-transform: uppercase; font-size: 1.2rem; letter-spacing: .2em;
+	a { color: @color-text; display: block; line-height: 2.5; }
+
+	li { transform: translateY(100%); opacity: 0; transition: transform .8s .4s, opacity .8s .4s;
+
+		body.menu-opened & { transform: translateY(0); opacity: 1;
+			&:nth-child(1) { transition-delay: .1s; }
+			&:nth-child(2) { transition-delay: .2s; }
+			&:nth-child(3) { transition-delay: .3s; }
+			&:nth-child(4) { transition-delay: .4s; }
+			&:nth-child(5) { transition-delay: .5s; }
+			&:nth-child(6) { transition-delay: .6s; }
+			&:nth-child(7) { transition-delay: .7s; }
+			&:nth-child(8) { transition-delay: .8s; }
+			&:nth-child(9) { transition-delay: .9s; }
+			&:nth-child(10) { transition-delay: 1s; }
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

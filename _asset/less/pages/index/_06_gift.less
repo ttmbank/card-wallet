@@ -1,0 +1,116 @@
+/* ==========================================================================
+/* ==========================================================================
+/* ==========================================================================
+
+   Screen Gift
+
+   ==========================================================================
+   ==========================================================================
+   ========================================================================== */
+
+.scr-gift { }
+
+
+@media @desktop {
+	.scr-gift {
+		background: #c9c9c9;
+		background: -moz-linear-gradient(-45deg,  #c9c9c9 0%, #ececec 100%);
+		background: -webkit-linear-gradient(-45deg,  #c9c9c9 0%,#ececec 100%);
+		background: linear-gradient(135deg,  #c9c9c9 0%,#ececec 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c9c9', endColorstr='#ececec',GradientType=1 );
+	}
+}
+
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+.scr-gift__cont { .flex(); .justify-content(space-between); }
+.scr-gift__left { width: 24rem; }
+.scr-gift__right { margin: 0 6.8vw 0 0; }
+
+
+@media @mobile {
+	.scr-gift__cont { display: block; }
+	.scr-gift__left { width: auto; }
+	.scr-gift__right { margin: 0; }
+}
+
+
+/* ==========================================================================
+   Scales
+   ========================================================================== */
+
+.scr-gift__scales { display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); max-width: 40%; max-height: 72%; }
+
+
+/* ==========================================================================
+   Scales Mobile
+   ========================================================================== */
+
+.scr-gift__scales-mob { display: block; width: 100%; max-width: 70%; margin: 1.5rem auto; }
+
+
+/* ==========================================================================
+   Animation Mobile
+   ========================================================================== */
+
+@media @mobile {
+	.scr-gift__sub-title,
+	.scr-gift__scales-mob,
+	.scr-gift__right { .anim-start();
+		.scr.animated & { .anim-end(); }
+	}
+	.scr-gift__sub-title { transition-delay: .4s !important; }
+	.scr-gift__scales-mob { transition-delay: .6s !important; }
+	.scr-gift__right { transition-delay: .8s !important; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

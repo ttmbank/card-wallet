@@ -1,0 +1,143 @@
+/* ==========================================================================
+/* ==========================================================================
+/* ==========================================================================
+
+   Screen Main
+
+   ==========================================================================
+   ==========================================================================
+   ========================================================================== */
+
+.scr-main { }
+
+
+@media @mobile {
+	.scr-main { padding-top: 100px; }
+}
+
+
+/* ==========================================================================
+   Card
+   ========================================================================== */
+
+.scr-main__card { display: block; max-height: 83%; max-width: 58%; }
+.scr-main__card-preload { position: absolute; left: 0; top: 0; opacity: 0; visibility: hidden; width: 10px; pointer-events: none;
+	img { position: absolute; left: 0; top: 0; width: 100%; }
+}
+
+
+/* ==========================================================================
+   Card Mobile
+   ========================================================================== */
+
+.scr-main__card-mob { display: block; margin: 0 auto 1.5rem; width: 100%; position: relative; z-index: 3; }
+
+
+/* ==========================================================================
+   Right Block
+   ========================================================================== */
+
+.scr-main__right { position: fixed !important; top: 0; right: 0; bottom: 0; height: 100vh; }
+
+
+/* ==========================================================================
+   Screen Name
+   ========================================================================== */
+
+@media @mobile {
+	.scr-main {
+		.scr-name { display: none; }
+	}
+}
+
+
+/* ==========================================================================
+   Animation
+   ========================================================================== */
+
+@media @desktop {
+	.scr-main__right { transform: translateX(0);
+		body.loaded & { transition: transform 1s; }
+		body.viewing-page-2 &,
+		body.viewing-page-3 &,
+		body.viewing-page-4 &,
+		body.viewing-page-5 &,
+		body.viewing-page-6 &,
+		body.viewing-page-7 & { transform: translateX(100%); }
+	}
+}
+
+
+/* ==========================================================================
+   Animation Mobile
+   ========================================================================== */
+
+@media @mobile {
+	//.scr-main {
+	//	.h1 { transition: none !important; opacity: 1; transform: none; }
+	//}
+
+	.scr-main__sub-title,
+	.scr-main__h2,
+	.scr-main__txt { .anim-start();
+		.scr.animated & { .anim-end(); }
+	}
+	.scr-main__sub-title { transition-delay: .4s !important; }
+	.scr-main__h2 { transition-delay: .6s !important; }
+	.scr-main__txt { transition-delay: .8s !important; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

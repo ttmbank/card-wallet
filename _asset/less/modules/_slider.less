@@ -1,0 +1,96 @@
+/* ==========================================================================
+/* ==========================================================================
+/* ==========================================================================
+
+   Slider
+
+   ==========================================================================
+   ==========================================================================
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Arrows Button
+   ========================================================================== */
+
+.slick-arrow { width: 4rem; height: 4rem; background: none; border-radius: 50%; border: solid .2rem #3b3d47; overflow: hidden; text-indent: -1000px;
+	&.slick-prev { display: none !important; }
+	&.slick-next { position: absolute; top: 9vw; right: 100%; margin-right: 3.125vw; transform: translate(50%,-50%); background: url('@{path-images}/arr-left.svg') no-repeat 45% 50%; background-size: 70% auto; }
+}
+
+@media @mobile {
+	.slick-arrow { display: none; }
+}
+
+
+
+/* ==========================================================================
+   Dots
+   ========================================================================== */
+
+.slick-dots { .clearfix(); z-index: 8;
+	button { border: none; position: relative; width: 5rem; height: 5rem; line-height: 5rem; text-align: center; color: #3b3d47; background: none; font-size: 2.5rem; font-weight: 700; opacity: .5; background: @color-black;
+		&:before { content: '0'; }
+		&:after { content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: solid .2rem #3b3d47; border-radius: 50%; }
+	}
+	li { float: left; margin: 0 2.1vw 0 0;
+		&:last-child { margin-right: 0 !important; }
+	}
+	li.slick-active button { opacity: 1; color: #fff;
+		&:after { border-color: @color-txt-grey; }
+	}
+}
+
+
+@media @mobile {
+	.slick-dots {
+		li { margin-right: 1.5rem; }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
